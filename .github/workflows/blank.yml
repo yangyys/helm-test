@@ -37,5 +37,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: View k8s nodes
-        run: kubectl get nodes
+      - name: run helm test job
+        run: helm install myconfigmap1 ./mychart2/ --debug --dry-run
