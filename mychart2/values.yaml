@@ -3,7 +3,7 @@ replicaCount:  1
 pod_label:  nginx-pod-label
 image: 
   repository: nginx
-  tag: 1.17.0
+  tag: latest
   pullPolicy: IfNotPresent
 container_name:  nginx-container
 containerport:  80
