@@ -42,5 +42,5 @@ jobs:
         
       - name: helm template
         run:
-          echo ${{ vars.image.repository }}
+          echo ${{ vars.IMAGE_REPOSITORY }}
       
