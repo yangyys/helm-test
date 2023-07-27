@@ -1,8 +1,10 @@
 deployment_name:  nginx-deployment
-replicas:  1
+replicaCount:  1
 pod_label:  nginx-pod-label
-image:  nginx
-imageTag:  1.17.0
+image: 
+  repository: nginx
+  tag: 1.17.0
+  pullPolicy: IfNotPresent
 container_name:  nginx-container
 containerport:  80
 service_name:  nginx-service

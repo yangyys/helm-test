@@ -4,7 +4,7 @@ metadata:
   name: {{ .Values.deployment_name }}
   namespace: {{ .Values.namespace }}
 spec:
-  replicas: {{ .Values.replicas }}
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: {{ .Values.pod_label }}
@@ -14,7 +14,7 @@ spec:
         app: {{ .Values.pod_label }}
     spec:
       containers:
-        - image: {{ .Values.image }}:{{ .Values.imageTag }}
+        - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           name: {{ .Values.container_name }}
           ports:
           - containerPort: {{ .Values.containerport }}
