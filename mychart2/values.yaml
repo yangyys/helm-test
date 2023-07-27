@@ -1,3 +1,13 @@
-MY_VALUE: "Hello World"
-
+deployment_name:  nginx-deployment
+replicas:  1
+pod_label:  nginx-pod-label
+image:  nginx
+imageTag:  1.17.0
+container_name:  nginx-container
+containerport:  80
+service_name:  nginx-service
+namespace:  ops
+port: 80
+targetport:  80
+nodeport:  30001
 
