@@ -40,7 +40,7 @@ jobs:
       - name: run helm test job
         run: helm install nginx-release ./mychart2/ --debug --dry-run
         
-      - name: helm template
+      - name: helm update image version
         run:
-          echo ${{ vars.IMAGE_REPOSITORY }}
+          helm upgrade nginx-release ./mychart2/ --set image.tag=1.20 --debug --dry-run
       
