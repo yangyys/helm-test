@@ -45,8 +45,10 @@ jobs:
           ./.github/scripts/replace_var.sh
         shell: bash
       
-#       - name: Cat value file
-#         run: cat values-DEV.yaml
+      - name: Cat new file
+        run: cat values-DEV.yaml.new
+      
+
         
 
       
