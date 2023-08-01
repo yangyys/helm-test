@@ -1,0 +1,17 @@
+name: helm deploy
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+  
+  jobs:
+    build:
+      name: Setup, Build, Publish, and Deploy
+      runs-on: self-hosted
+      steps:
+        - name: checkout the code
+          uses: actions/checkout@v3
+          
+          
