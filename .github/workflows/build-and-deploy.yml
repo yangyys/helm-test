@@ -18,7 +18,8 @@ jobs:
          run: |
            pwd
            ls -al
-           cp -rf values-DEV.yaml ./mychart2/values.yaml
+           cp -rf values-DEV.yaml.new ./mychart2/values.yaml
+           ls -al mychart2/
        
        - name: debug dry run helm
          run:
