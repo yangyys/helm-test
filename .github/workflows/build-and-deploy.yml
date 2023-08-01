@@ -15,7 +15,8 @@ jobs:
          uses: actions/checkout@v3
        
        - name: debug dry run helm
-         run:
+         run: |
+           cat values.yaml
            helm install nginx-release ./mychart2/ --debug --dry-run
           
           
