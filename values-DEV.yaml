@@ -4,6 +4,9 @@
 
 replicaCount: <$REPLICACOUNT>
 
+namespace: <$NAMESPACE_OPS>
+ARTIFACTORY: <$ARTIFACTORY_URL>
+
 image:
   repository: <$IMAGE_REPOSITORY>
   # repository: https://artifactrepo.server.ha.org.hk:55743/artifactory/int-docker-dev-chassis/msgbc-core-app/latest/
