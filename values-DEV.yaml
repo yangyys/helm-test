@@ -1,8 +1,10 @@
 deployment_name:  nginx-deployment
 replicaCount:  <$REPLICACOUNT>
 pod_label:  nginx-pod-label
-image:  nginx
-imageTag:  <$IMAGE_TAG>
+image:  
+  repository: <$NGINX_IMAGE>
+  pullPolicy: IfNotPresent
+  tag:  <$IMAGE_TAG>
 container_name:  nginx-container
 containerport:  80
 service_name:  nginx-service
