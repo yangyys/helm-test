@@ -16,6 +16,8 @@ jobs:
          
        - name: dfdf
          run: |
+           pwd
+           ls -al
          
           
           
