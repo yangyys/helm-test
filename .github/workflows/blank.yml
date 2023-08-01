@@ -47,6 +47,13 @@ jobs:
       
       - name: Cat new file
         run: cat values-DEV.yaml.new
+        
+      - name: copy value-DEV file to helm
+        run: |
+           pwd
+           ls -al
+           cp -rf values-DEV.yaml.new ./mychart2/values.yaml
+           ls -al mychart2/
       
 
         
