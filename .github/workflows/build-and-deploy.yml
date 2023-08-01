@@ -13,13 +13,6 @@ jobs:
      steps:
        - name: checkout the code
          uses: actions/checkout@v3
-         
-       - name: copy value-DEV file to helm
-         run: |
-           pwd
-           ls -al
-           cp -rf values-DEV.yaml.new ./mychart2/values.yaml
-           ls -al mychart2/
        
        - name: debug dry run helm
          run:
