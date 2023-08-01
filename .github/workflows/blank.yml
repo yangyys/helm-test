@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: replace variables
+name: replace variables and helm deploy
 
 # Controls when the workflow will run
 on:
@@ -55,6 +55,11 @@ jobs:
            cp -rf values-DEV.yaml.new ./mychart2/values.yaml
            ls -al mychart2/
       
+      - name: debug dry run helm
+        run: |
+           pwd
+           ls -al mychart2
+           #helm install nginx-release ./mychart2/ --debug --dry-run
 
         
 
