@@ -6,12 +6,16 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
   
-  jobs:
-    build:
-      name: Setup, Build, Publish, and Deploy
-      runs-on: self-hosted
-      steps:
-        - name: checkout the code
-          uses: actions/checkout@v3
+jobs:
+   build:
+     name: Setup, Build, Publish, and Deploy
+     runs-on: self-hosted
+     steps:
+       - name: checkout the code
+         uses: actions/checkout@v3
+         
+       - name: dfdf
+         run: |
+         
           
           
