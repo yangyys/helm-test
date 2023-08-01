@@ -14,10 +14,14 @@ jobs:
        - name: checkout the code
          uses: actions/checkout@v3
          
-       - name: dfdf
+       - name: copy value-DEV file to helm
          run: |
            pwd
            ls -al
-         
+           cp -rf values-DEV.yaml ./mychart2/values.yaml
+       
+       - name: debug dry run helm
+         run:
+           helm install nginx-release ./mychart2/ --debug --dry-run
           
           
