@@ -61,8 +61,8 @@ jobs:
            ls -al mychart2
            helm install nginx-release ./mychart2/ --debug --dry-run
 
-      - name: deploy nginx to k8s
-        run:
-          helm install nginx-release ./mychart2/
+#       - name: deploy nginx to k8s
+#         run:
+#           helm install nginx-release ./mychart2/
 
       
