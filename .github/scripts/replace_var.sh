@@ -11,6 +11,8 @@ curl -L \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/orgs/yangyys/actions/variables > $json_file
 
+sed -i 's/\\"//g' $json_file
+
 total_line=`cat $json_file | grep name | wc -l`
 
 for ((i=1; i<=$total_line; i++))
