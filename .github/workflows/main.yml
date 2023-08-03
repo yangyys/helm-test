@@ -13,8 +13,8 @@ jobs:
         env:
           MY_TOKEN: ${{ secrets.MY_TOKEN }}
         run: |
-          chmod +x ./.github/scripts/replace_variables.sh
-          ./.github/scripts/replace_variables.sh
+          chmod +x ./.github/scripts/replace_var.sh
+          ./.github/scripts/replace_var.sh
         shell: bash
 
       - name: Cat new file
