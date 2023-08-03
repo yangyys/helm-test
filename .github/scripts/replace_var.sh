@@ -10,7 +10,7 @@ curl -L \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/orgs/yangyys/actions/variables > $json_file
 
-#sed -i 's/\\"//g' $json_file
+sed -i 's/\\"//g' vars.json
 
 #total_line=`cat $json_file | grep name | wc -l`
 total_line=`grep total_count $json_file |head -n 1 |awk '{print $2}' |sed 's/,//g'`
