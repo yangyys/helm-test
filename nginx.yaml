@@ -1,0 +1,14 @@
+deployment_name:  nginx-deployment
+replicaCount:  <$REPLICACOUNT>
+pod_label:  nginx-pod-label
+image:  
+  repository: <$NGINX_IMAGE>
+  pullPolicy: IfNotPresent
+  tag:  <$IMAGE_TAG>
+container_name:  nginx-container
+containerport:  80
+service_name:  nginx-service
+namespace:  <$NAMESPACE_OPS>
+port: 80
+targetport:  80
+nodeport:  30001
