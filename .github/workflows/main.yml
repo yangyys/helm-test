@@ -1,0 +1,21 @@
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  test-job1:
+    runs-on: self-hosted
+    steps:
+      - name: checkout the code
+        uses: actions/checkout@v3
+      - name: Run script
+        env:
+          MY_TOKEN: ${{ secrets.MY_TOKEN }}
+        run: |
+          chmod +x ./.github/scripts/replace_variables.sh
+          ./.github/scripts/replace_variables.sh
+        shell: bash
+
+      - name: Cat new file
+        run: cat values-DEV.yaml.new
